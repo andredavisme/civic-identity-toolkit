@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civic Identity Toolkit | Community-Centered Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5f8d 100%);
+            color: white;
+            padding: 3rem 1.5rem;
+            margin-bottom: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .spark-quote {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+            font-style: italic;
+            color: #856404;
+        }
+        
+        .card {
+            background: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+        
+        h2 {
+            color: #1e3a5f;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #2c5f8d;
+        }
+        
+        h3 {
+            color: #2c5f8d;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        li {
+            margin: 0.5rem 0;
+        }
+        
+        .contributor {
+            background: #e8f4f8;
+            padding: 1rem;
+            margin: 0.75rem 0;
+            border-radius: 6px;
+            border-left: 4px solid #2c5f8d;
+        }
+        
+        .contributor strong {
+            color: #1e3a5f;
+        }
+        
+        .discussion-prompt {
+            background: #f0f7ff;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+            border: 2px solid #2c5f8d;
+        }
+        
+        .discussion-prompt h4 {
+            color: #1e3a5f;
+            margin-bottom: 0.75rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #2c5f8d;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 1rem 0.5rem 1rem 0;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #1e3a5f;
+        }
+        
+        .cta-button.secondary {
+            background: white;
+            color: #2c5f8d;
+            border: 2px solid #2c5f8d;
+        }
+        
+        .cta-button.secondary:hover {
+            background: #f0f7ff;
+        }
+        
+        .framework {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+        }
+        
+        .framework ol {
+            counter-reset: framework-counter;
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .framework li {
+            counter-increment: framework-counter;
+            margin: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+        }
+        
+        .framework li::before {
+            content: counter(framework-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #2c5f8d;
+            color: white;
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        footer {
+            margin-top: 4rem;
+            padding: 2rem 0;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .metadata {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Civic Identity Toolkit</h1>
+            <p>A community resource for thoughtful civic design decisions</p>
+        </header>
+        
+        <div class="spark-quote">
+            <strong>"Community is the fuel and empowerment is the spark."</strong><br>
+            Don't spread fire before it's strong enough to burn. Thoughtful engagement creates lasting change.
+        </div>
+        
+        <div class="card">
+            <h2>Case Study: Newburgh, Maine</h2>
+            <p class="metadata">Source: <a href="https://www.reddit.com/r/Maine/comments/1tc0z5i/this_tiny_maine_town_used_ai_to_make_a_new_logo/" target="_blank">r/Maine Discussion</a> | May 2026</p>
+            
+            <h3>The Situation</h3>
+            <p>Newburgh, Maine (population 1,520) proposed an AI-generated municipal logo to replace their outdated design. The town posted the concept on Facebook, transparently acknowledging its AI origin and requesting community feedback.</p>
+            
+            <h3>Issues Identified</h3>
+            <ul>
+                <li><strong>Quality concerns:</strong> The AI logo contained obvious errors—upside-down "1"s in "1819" and the letter "I" rendered as the number "1"</li>
+                <li><strong>Artistic authenticity:</strong> Questions arose about whether AI can genuinely capture a community's identity and values</li>
+                <li><strong>Economic impact:</strong> Missed opportunity to support local artists and designers within the community</li>
+                <li><strong>Civic values:</strong> The role of human creativity in representing municipal identity and government functions</li>
+            </ul>
+            
+            <h3>Community Response</h3>
+            <p>The proposal sparked significant dialogue (291 upvotes, 98% approval ratio, 153 comments) about the intersection of technology and civic identity. The town's Facebook page went private following the discussion, suggesting reconsideration of the approach.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Contributors & Solutions</h2>
+            
+            <div class="contributor">
+                <strong>David Aston</strong> — Owner, Timber Hearth Tattoo Co. (Newburgh resident)<br>
+                <em>Offered to design a human-made logo for the town</em><br>
+                <p style="margin-top: 0.5rem;">"I think it's important for local governments to go human-made because it reinforces the importance of design and art as a human endeavor that's just as important as the other functions of government."</p>
+            </div>
+            
+            <div class="contributor">
+                <strong>Town of Newburgh Administration</strong><br>
+                <em>Initiated transparent community dialogue</em><br>
+                <p style="margin-top: 0.5rem;">Demonstrated willingness to seek feedback and engage residents in civic decision-making, even when the outcome required reconsidering the initial approach.</p>
+            </div>
+            
+            <div class="contributor">
+                <strong>Reddit Community (r/Maine)</strong><br>
+                <em>Provided broader context and perspective</em><br>
+                <p style="margin-top: 0.5rem;">Contributors like Trick_Parfait_924 and Starboard_Pete highlighted common counter-arguments and helped frame the discussion beyond just one town's decision.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Framework for Community Design Decisions</h2>
+            <p>When your administration faces similar decisions about civic identity and visual representation, consider this approach:</p>
+            
+            <div class="framework">
+                <ol>
+                    <li><strong>Identify the actual need</strong> — Is the current logo/design truly problematic, or just dated? What specific issues does it create for your administration and community?</li>
+                    
+                    <li><strong>Engage before proposing</strong> — Ask your community what they value about their town's identity before presenting any design solutions. What symbols, history, or values matter most?</li>
+                    
+                    <li><strong>Inventory local talent</strong> — Survey local artists, designers, students, and creative professionals. Many communities have untapped talent willing to contribute.</li>
+                    
+                    <li><strong>Consider hybrid approaches</strong> — Tools like AI can support the design process (mood boards, color exploration, initial concepts) while keeping human creativity central to the final product.</li>
+                    
+                    <li><strong>Budget realistically</strong> — Professional design is an investment in your community's identity. Explore grants, volunteer partnerships, or design competitions if budget is limited.</li>
+                    
+                    <li><strong>Create feedback loops</strong> — Present concepts at multiple stages. Early sketches, refined options, and final candidates all benefit from community input.</li>
+                    
+                    <li><strong>Educate about design value</strong> — Help your community understand that civic design isn't just aesthetics—it's about representation, professionalism, and supporting local creative economy.</li>
+                    
+                    <li><strong>Document the process</strong> — Share the journey transparently. When residents see thoughtful process, they're more invested in the outcome.</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Discussion Prompts</h2>
+            <p>These questions can help guide productive conversations in your community or on the <a href="https://www.reddit.com/r/Maine/comments/1tc0z5i/this_tiny_maine_town_used_ai_to_make_a_new_logo/" target="_blank">original Reddit thread</a>:</p>
+            
+            <div class="discussion-prompt">
+                <h4>🎨 On Design & Creativity</h4>
+                <ul>
+                    <li>What role should human artistry play in civic identity versus technological efficiency?</li>
+                    <li>How can AI tools support (rather than replace) local creative talent?</li>
+                    <li>What makes a logo authentically represent a community's values and history?</li>
+                </ul>
+            </div>
+            
+            <div class="discussion-prompt">
+                <h4>💰 On Budget & Resources</h4>
+                <ul>
+                    <li>How should small municipalities balance budget constraints with supporting local artists?</li>
+                    <li>What creative funding models exist for civic design projects?</li>
+                    <li>Is free AI-generated design truly "free" when considering missed opportunities for community investment?</li>
+                </ul>
+            </div>
+            
+            <div class="discussion-prompt">
+                <h4>🤝 On Community Process</h4>
+                <ul>
+                    <li>What level of community involvement is appropriate for civic identity decisions?</li>
+                    <li>How can administrations invite feedback while still making timely decisions?</li>
+                    <li>What can other Maine towns learn from Newburgh's transparent approach?</li>
+                </ul>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://www.reddit.com/r/Maine/comments/1tc0z5i/this_tiny_maine_town_used_ai_to_make_a_new_logo/" class="cta-button" target="_blank">Join the Discussion on Reddit</a>
+                <a href="https://github.com/andredavisme/civic-identity-toolkit" class="cta-button secondary" target="_blank">Contribute to This Resource</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Why Consolidation Matters</h2>
+            <p>We encourage you to share your thoughts on the <a href="https://www.reddit.com/r/Maine/comments/1tc0z5i/this_tiny_maine_town_used_ai_to_make_a_new_logo/" target="_blank">original Reddit thread</a> rather than fragmenting the conversation. Here's why:</p>
+            
+            <ul>
+                <li><strong>Builds momentum:</strong> Concentrated discussion creates critical mass for actual change rather than scattered opinions</li>
+                <li><strong>Respects contributors:</strong> Those who started the dialogue deserve to see it develop in the space they created</li>
+                <li><strong>Creates reference:</strong> A single, comprehensive thread becomes a valuable resource for other communities facing similar decisions</li>
+                <li><strong>Enables action:</strong> When conversation stays together, it's easier for decision-makers to identify consensus and concrete solutions</li>
+            </ul>
+            
+            <p style="margin-top: 1.5rem;"><em>Remember: Don't spread fire before it's strong enough to burn. Let the community fuel strengthen the flame before carrying it elsewhere.</em></p>
+        </div>
+        
+        <footer>
+            <p><strong>Civic Identity Toolkit</strong></p>
+            <p>A resource for Maine communities and beyond</p>
+            <p style="margin-top: 1rem; font-size: 0.85rem;">Created by <a href="https://github.com/andredavisme">André Maurice Davis</a> | <a href="https://207analytix.com">207 Analytix</a></p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Source material: <a href="https://www.reddit.com/r/Maine/comments/1tc0z5i/this_tiny_maine_town_used_ai_to_make_a_new_logo/" target="_blank">r/Maine community discussion</a> | May 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
